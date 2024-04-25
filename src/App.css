@@ -1,0 +1,104 @@
+.header {
+  height: 200px;
+  width: 100%;
+  background-color: #e9eef6;
+  padding-top: 50px; /* Check if this padding is needed */
+}
+
+.card-container,
+.card-wrapper {
+  height: 300px; /* Increased the height of the cards */
+  width: calc(25% - 20px); /* Adjusted the width calculation */
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  margin: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-container:hover,
+.card-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-holder {
+  width: 100%;
+  height: 95%; /* Adjusted the height of the task-holder */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Unused or check if needed */
+.card-top {
+  width: 100%;
+  height: 5%;
+}
+
+/* Unused or check if needed */
+.card-header {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.task-container {
+  height: 600px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+
+.task-holder i {
+  margin-right: 10px;
+  font-size: 20px; /* Adjust icon size for better visibility */
+}
+
+/* Customize colors to your liking */
+.card-container,
+.card-wrapper,
+.card-top {
+  background-color: #fff; /* Adjust background color */
+}
+
+.fas.fa-edit,
+.fas.fa-trash-alt {
+  color: #555; /* Adjust icon color */
+  cursor: pointer;
+}
+
+/* Add subtle hover effect to icons */
+.task-holder i:hover {
+  opacity: 0.8;
+  color: #333;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .card-container,
+  .card-wrapper {
+    width: calc(50% - 20px); /* Adjusted width for tablets */
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .card-container,
+  .card-wrapper {
+    width: calc(33.33% - 20px); /* Adjusted width for iPad Air and Pro */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .card-container,
+  .card-wrapper {
+    width: 100%; /* Full width for mobile devices */
+  }
+}
